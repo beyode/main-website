@@ -1,0 +1,42 @@
+{
+
+  "posts": [
+    {
+      "id": "testing-action-mailer-in-rails",
+      "date": "15th December 2019",
+      "author": "Moses Gathuku",
+      "cover_image" : "action_mailer.jpg",
+      "category": "Rails",
+      "title": "Testing Action Mailers in Rails",
+      "description": "Testing your Mailers can be sometimes complicated. Do you remember sending an email and heading to your inbox to see the email design and content? Right here are simple ways to test your Mailers."
+    },
+    {
+      "id": "testing-external-api-with-vcr",
+      "date": "23rd November 2019",
+      "author": "Moses Gathuku",
+      "cover_image": "vcr.jpg",
+      "category": "Rails",
+      "title": "Testing External APIs with VCR in Rails",
+      "description": "Running external APIs tests can be time-consuming, VCR is a ruby gem that allows you to record test suite's HTTP interactions and replay them during future test runs for fast, deterministic, accurate tests"
+    },
+    {
+      "id": "gem-cache-in-docker",
+      "date": "17th January 2020",
+      "author": "Moses Gathuku",
+      "cover_image": "docker.png",
+      "category": "Docker",
+      "title": "Gem Cache in Docker",
+      "description": "While dockerizing a rails app or any other app using bundler for gems management, one of the problem is slow bundle install while building the image"
+    },
+    {
+      "id": "host-your-turn-server",
+      "date": "15th August 2020",
+      "author": "Moses Gathuku",
+      "cover_image": "turn_server.png",
+      "category": "WebRTC",
+      "title": "Deploying TURN Server",
+      "description": "If you have worked with WebRTC you might have come across TURN Server. what can you deploy turn server?"
+    }
+
+  ]
+}
