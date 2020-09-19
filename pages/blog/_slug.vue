@@ -66,7 +66,7 @@ export default{
       {
         hid: 'og:image',
         property: 'og:image',
-        content: this.BASE_URL + artile.cover_image
+        content: this.BASE_URL + this.article.cover_image
       },
       {
         hid: 'og:title',
@@ -96,17 +96,17 @@ export default{
       {
         hid: 'twitter:image',
         property: 'twitter:image',
-        content: this.BASE_URL + artile.cover_image
+        content: this.BASE_URL + this.article.cover_image
       },
       {
         hid: 'twitter:description',
         property: 'twitter:description',
-        content: this.artile.description
+        content: this.article.description
       },
       {
         hid: 'twitter:title',
         property: 'twitter:title',
-        content: this.artile.title
+        content: this.article.title
       },
       {
         hid: 'og:image:alt',
@@ -116,7 +116,7 @@ export default{
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: this.BASE_URL + article.cover_image
+        content: this.BASE_URL + this.article.cover_image
       },
     ]
   }

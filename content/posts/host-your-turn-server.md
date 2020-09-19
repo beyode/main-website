@@ -79,7 +79,7 @@ sudo bash deploy.sh user password somerealm.com
 
 You can use WebRTC [Trickle ICE page](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/) to validate if it works.
 
-![](./images/ice_test.png)
+![](/images/ice_test.png)
 
 ### Docker Container
 There is also a docker Container which makes it simple to deploy and reusable. Find the image in [docker hub](https://hub.docker.com/r/zolochevska/turn-server/).
