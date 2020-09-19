@@ -49,6 +49,11 @@ export default{
      return { article }
     //this.article = article
   },
+  data(){
+    return {
+      BASE_URL: 'https:://beyode.co.ke/images/'
+    }
+  },
   head() {
   return {
     title: this.article.title,
@@ -61,13 +66,58 @@ export default{
       {
         hid: 'og:image',
         property: 'og:image',
-        content: this.imgPath(this.article.cover_image)
+        content: this.BASE_URL + artile.cover_image
       },
       {
         hid: 'og:title',
         property: 'og:title',
         content: this.article.title
-      }
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Beyode Technologies'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'twitter:site',
+        property: 'twitter:site',
+        content: '@Gathukumose'
+      },
+      {
+        hid: 'twiter:card',
+        property: 'og:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:image',
+        property: 'twitter:image',
+        content: this.BASE_URL + artile.cover_image
+      },
+      {
+        hid: 'twitter:description',
+        property: 'twitter:description',
+        content: this.artile.description
+      },
+      {
+        hid: 'twitter:title',
+        property: 'twitter:title',
+        content: this.artile.title
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'Beyode Technologies'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: this.BASE_URL + article.cover_image
+      },
     ]
   }
   },
