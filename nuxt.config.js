@@ -20,7 +20,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://beyode.co.ke/logo.png'
+        content: 'https://beyode.co.ke/card-image.png'
       },
       {
         hid: 'og:title',
@@ -75,7 +75,7 @@ export default {
 
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/card-image.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
 
     script: [
