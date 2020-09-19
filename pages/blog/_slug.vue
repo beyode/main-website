@@ -2,7 +2,7 @@
   <div>
     <div class="flex justify-between px-12 py-12">
       <div>
-        <!-- <img class="h-12 w-auto" src="../assets/img/logo.png" alt="" /> -->
+        <img class="h-12 w-auto" src="../../assets/img/logo.png" alt="" />
       </div>
       <div >
         <router-link to="/blogs">
@@ -16,22 +16,22 @@
       </div>
     </div>
     <div class="text-center">
-      <span class="text-gray-500 text-sm"> {{formatDate(article.createdAt)}} </span>
+      <span class="text-gray-500 text-sm"> {{article.date}} </span>
       <h2 class="text-4xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
         {{article.title}}
       </h2>
     </div>
     <hr class="bg-gray-200 my-3">
-    <div class="grid grid-col grid-cols-3 gap-6  py-8 px-6">
+    <div class="grid grid-col grid-cols-4 gap-6  py-8 px-6">
       <div class="hidden md:block cols-span-1 text-center">
         <div class="flex justify-center">
           <span>
-            <!-- <img class="h-8 w-auto rounded-full" src="../assets/img/authors/musah.jpeg" alt=""> -->
+            <img class="h-8 w-auto rounded-full" src="../../assets/img/authors/musah.jpeg" alt="">
           </span>
           <span class="font-bold text-gray-700 ml-2">{{article.author}}</span>
         </div>
       </div>
-      <div class="col-span-3 md:col-span-2 markdown">
+      <div class="col-span-4 md:col-span-3 mr-6 markdown">
         <!-- <router-view/> -->
         <nuxt-content :document="article" />
 
@@ -46,18 +46,146 @@ export default{
   async asyncData({ $content, params }) {
       const article = await $content('posts', params.slug).fetch()
 
-      return { article }
-    },
-
-    methods: {
-      formatDate(date) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' }
-        return new Date(date).toLocaleDateString('en', options)
+     return { article }
+    //this.article = article
+  },
+  head() {
+  return {
+    title: this.article.title,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: this.article.description
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: this.imgPath(this.article.cover_image)
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: this.article.title
       }
+    ]
+  }
+  },
 
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
+    imgPath(name){
+      return require('~/content/posts/images/' + name)
     }
+  }
 }
 </script>
 <style>
+
+/* Additional vertical padding used by kbd tag. */
+.py-05 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.nuxt-content {
+  @apply text-gray-900 leading-normal break-words;
+}
+
+.nuxt-content > * + * {
+  @apply mt-0 mb-4;
+}
+
+.nuxt-content li + li {
+  @apply mt-1;
+}
+
+.nuxt-content li > p + p {
+  @apply mt-6;
+}
+
+.nuxt-content strong {
+  @apply font-semibold;
+}
+
+.nuxt-content a {
+  @apply text-blue-600 font-semibold;
+}
+
+.nuxt-content strong a {
+  @apply font-bold;
+}
+
+.nuxt-content h1 {
+  @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2;
+}
+
+.nuxt-content h2 {
+  @apply leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2;
+}
+
+.nuxt-content h3 {
+  @apply leading-snug text-lg font-semibold mb-4 mt-6;
+}
+
+.nuxt-content h4 {
+  @apply leading-none text-base font-semibold mb-4 mt-6;
+}
+
+.nuxt-content h5 {
+  @apply leading-tight text-sm font-semibold mb-4 mt-6;
+}
+
+.nuxt-content h6 {
+  @apply leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6;
+}
+
+.nuxt-content blockquote {
+  @apply text-base border-l-4 border-green-300 bg-gray-100 pl-4 pr-4 text-gray-600 py-3;
+}
+
+.nuxt-content code {
+  @apply font-mono text-sm inline bg-gray-300 rounded px-1 py-05;
+}
+
+.nuxt-content pre {
+  /* @apply bg-gray-100 rounded p-4 my-3 overflow-scroll; */
+}
+
+.nuxt-content pre code {
+  @apply block bg-transparent font-mono p-0 overflow-visible rounded-none;
+}
+
+.nuxt-content ul {
+  @apply text-base pl-8 list-disc;
+}
+
+.nuxt-content ol {
+  @apply text-base pl-8 list-decimal;
+}
+
+.nuxt-content kbd {
+  @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+}
+
+.nuxt-content table {
+  @apply text-base border-gray-600;
+}
+
+.nuxt-content th {
+  @apply border py-1 px-3;
+}
+
+.nuxt-content td {
+  @apply border py-1 px-3;
+}
+
+/* Override pygments style background color. */
+.nuxt-content .highlight pre {
+  @apply bg-gray-100 !important;
+}
 
 </style>
