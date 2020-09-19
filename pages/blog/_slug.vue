@@ -127,9 +127,9 @@ export default{
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     },
-    imgPath(name){
-      return require('~/content/posts/images/' + name)
-    }
+    // imgPath(name){
+    //   return require('~/content/posts/images/' + name)
+    // }
   }
 }
 </script>
