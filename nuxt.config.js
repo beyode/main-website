@@ -15,7 +15,9 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Software Development and Consulting'
+        content: "Software Development and Consulting.We are proven experts in
+        web development shipping web applications and APIs using modern
+        technologies."
       },
       {
         hid: 'og:image',
@@ -50,12 +52,14 @@ export default {
       {
         hid: 'twitter:image',
         property: 'twitter:image',
-        content: 'https://beyode.co.ke/logo.png'
+        content: 'https://beyode.co.ke/card-image.png'
       },
       {
         hid: 'twitter:description',
         property: 'twitter:description',
-        content: 'Software Development and Consulting'
+        content: "Software Development and Consulting.We are proven experts in
+        web development shipping web applications and APIs using modern
+        technologies."
       },
       {
         hid: 'twitter:title',
@@ -70,7 +74,7 @@ export default {
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://beyode.co.ke/logo.png'
+        content: 'https://beyode.co.ke/card-image.png'
       },
 
     ],
