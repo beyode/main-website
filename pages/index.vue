@@ -104,19 +104,15 @@
 </div>
 </template>
 
-// <script>
-//   import Testimony from './Testimony'
-//   import Technologies from './Technologies'
-//   export default{
-//     components:{
-//       Testimony,
-//       Technologies
-//     },
-//     data(){
-//       return {
-//         open: false
-//       }
-//     }
-//
-//   }
-// </script>
+ <script>
+  export default{
+    components:{
+    },
+    data(){
+      return {
+        open: false
+      }
+    }
+
+  }
+ </script>
