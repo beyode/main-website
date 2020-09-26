@@ -53,23 +53,14 @@ export default{
   },
   head() {
   return {
-    title: this.article.title,
+    title: 'Laravel mpesa',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: this.article.description
+        content: 'A simple mpesa package for laravel framework'
       },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: this.BASE_URL + this.article.cover_image
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: this.article.title
-      },
+
       {
         hid: 'og:site_name',
         property: 'og:site_name',
@@ -84,37 +75,7 @@ export default{
         hid: 'twitter:site',
         property: 'twitter:site',
         content: '@Gathukumose'
-      },
-      {
-        hid: 'twiter:card',
-        property: 'og:card',
-        content: 'summary_large_image'
-      },
-      {
-        hid: 'twitter:image',
-        property: 'twitter:image',
-        content: this.BASE_URL + this.article.cover_image
-      },
-      {
-        hid: 'twitter:description',
-        property: 'twitter:description',
-        content: this.article.description
-      },
-      {
-        hid: 'twitter:title',
-        property: 'twitter:title',
-        content: this.article.title
-      },
-      {
-        hid: 'og:image:alt',
-        property: 'og:image:alt',
-        content: 'Beyode Technologies'
-      },
-      {
-        hid: 'og:image:secure_url',
-        property: 'og:image:secure_url',
-        content: this.BASE_URL + this.article.cover_image
-      },
+      }
     ]
   }
   },
