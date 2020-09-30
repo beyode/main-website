@@ -60,7 +60,7 @@ And optionally add a new line to the `aliases` array:
  ```bash
  php artisan mpesa:install
  ```
- This will help in publishing `config/mpesa.php` file. . From the mpesa config file this where you will define if your application is running in sandbox or production. If your application is running on sandbox you  will define `'mpesa_status' => 'sandbox',`
+ This will help in publishing `config/mpesa.php` file. . From the mpesa config file this where you will define if your application is running in sandbox or production. If your application is running on sandbox you  will define `'mpesa_env' => 'sandbox',`
  You will continue filling your test credentials from your application in [developers portal ](developers.safaricom.co.ke)
 
  ```php
