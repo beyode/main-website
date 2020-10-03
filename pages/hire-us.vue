@@ -116,7 +116,7 @@
       </div>
     </div>
 
-    <div class="flex justify-center py-6 bg-gray-100">
+    <div class="flex justify-center px-6 py-6 bg-gray-100">
       <form @submit.prevent="handleSubmit()" name="hireus" class="w-full max-w-lg">
         <input type="hidden" name="bot-field" value="">
         <div class="flex flex-wrap -mx-3 mb-6">
