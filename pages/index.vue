@@ -29,7 +29,7 @@
         <div class="lg:max-w-xl lg:mx-auto my-3">
         <p class="mt-3 text-base font-bold text-gray-900 sm:mt-5 sm:text-lg md:mt-5 md:text-xl lg:mx-0">
           We are a small team made up of <a class="text-blue-600" href="https://twitter.com/Gathukumose">Moses</a> and other contractors. We love working with rails default stack
-          and we are ready to help your business. We are looking to add a new client project or two in 2022. Please email 
+          and we are ready to help your business. We are looking to add a new client project or two in {{year}}. Please email 
           Moses if we can help your business.
         </p>
         </div>
@@ -74,7 +74,8 @@
     },
     data(){
       return {
-        open: false
+        open: false,
+        year: new Date().getFullYear()
       }
     }
 
